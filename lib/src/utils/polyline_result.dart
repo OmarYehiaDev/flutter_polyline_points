@@ -1,3 +1,5 @@
+import 'package:flutter_polyline_points/src/PointLatLng.dart';
+
 import '../../flutter_polyline_points.dart';
 
 /// description:
@@ -32,18 +34,24 @@ class PolylineResult {
   String? startAddress;
   String? overviewPolyline;
 
-  PolylineResult(
-      {this.status,
-      this.points = const [],
-      this.distance,
-      this.duration,
-      this.alternatives = const [],
-      this.errorMessage = "",
-      this.distanceText,
-      this.distanceValue,
-      this.durationText,
-      this.durationValue,
-      this.endAddress,
-      this.startAddress,
-      this.overviewPolyline});
+  PointLatLng? boundsNortheast;
+  PointLatLng? boundsSouthwest;
+
+  PolylineResult({
+    this.status,
+    this.points = const [],
+    this.distance,
+    this.duration,
+    this.alternatives = const [],
+    this.errorMessage = "",
+    this.distanceText,
+    this.distanceValue,
+    this.durationText,
+    this.durationValue,
+    this.endAddress,
+    this.startAddress,
+    this.overviewPolyline,
+    this.boundsNortheast,
+    this.boundsSouthwest,
+  });
 }
